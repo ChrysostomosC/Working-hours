@@ -1,0 +1,19 @@
+﻿@model List<Job>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>All Jobs</h1>
+
+<p><a href="/Jobs/CreateJob">Create job</a></p>
+
+<ul>
+    @foreach (Job job in Model)
+    {
+        <li>@job.Title <a href="/Jobs/ShowJob/@job.Id">Show job</a></li>
+
+        <p><a href="/Jobs/EditJob/@job.Id">Edit job</a></p>
+    }
+
+</ul>

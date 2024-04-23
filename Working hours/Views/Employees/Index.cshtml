@@ -1,0 +1,21 @@
+﻿@model List<Employee>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>All employees</h1>
+
+<P><a href="Employees/Create">Create employee</a></P>
+
+<ul>
+
+    @foreach (Employee employee in Model)
+    {
+        <li>@employee.FirstName @employee.LastName <a href="/Employees/ShowEmployee/@employee.Id">Show</a></li>
+
+        <p><a href="/Employees/EditEmployee/@employee.Id">Edit</a></p>
+    }
+  
+</ul>
+

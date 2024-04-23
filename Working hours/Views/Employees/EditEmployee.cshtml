@@ -1,0 +1,16 @@
+﻿@model Employee
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form action="/Employees/EditEmployee/@Model.Id" method="post">
+    <input type="text" name="FirstName" placeholder="First name" value="@Model.FirstName" />
+    <input type="text" name="LastName" placeholder="Last name" value="@Model.LastName" />
+    <input type="text" name="Birthday" placeholder="Birthday" value="@Model.Birthday" />
+    <input type="text" name="Email" placeholder="Email" value="@Model.Email" />
+    <input type="text" name="Address" placeholder="Address" value="@Model.Address" />
+    <input type="text" name="PostalCode" placeholder="Postal code" value="@Model.PostalCode" />
+    <input type="text" name="PhoneNumber" placeholder="Phone number" value="@Model.PhoneNumber" />
+    <button>Save</button>
+</form>
